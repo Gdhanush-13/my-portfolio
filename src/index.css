@@ -1,0 +1,420 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ==============================
+   Modern Portfolio Design System
+   Sophisticated & Professional
+   Enhanced with Modern Utilities
+   ============================== */
+
+@layer base {
+  :root {
+    /* ----------------------
+       Core Brand Colors - Dark Mode
+       ---------------------- */
+    --background: 240 13% 7%;
+    --foreground: 60 30% 96%;
+    --card: 240 11% 10%;
+    --card-foreground: 60 30% 96%;
+    --popover: 240 11% 10%;
+    --popover-foreground: 60 30% 96%;
+    --primary: 45 93% 58%;
+    --primary-foreground: 240 13% 7%;
+    --primary-glow: 45 93% 68%;
+    --secondary: 158 64% 52%;
+    --secondary-foreground: 240 13% 7%;
+    --accent: 14 90% 60%;
+    --accent-foreground: 240 13% 7%;
+    --muted: 240 9% 17%;
+    --muted-foreground: 240 5% 65%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 210 40% 98%;
+    --success: 142 71% 45%;
+    --success-foreground: 210 40% 98%;
+    --warning: 38 92% 50%;
+    --warning-foreground: 222 15% 5%;
+    --border: 217 12% 16%;
+    --input: 217 12% 16%;
+    --ring: 217 91% 60%;
+    --radius: 0.75rem;
+    --radius-lg: 1rem;
+    --radius-xl: 1.5rem;
+
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-glow)));
+    --gradient-secondary: linear-gradient(135deg, hsl(var(--secondary)), hsl(var(--accent)));
+    --gradient-accent: linear-gradient(135deg, hsl(var(--accent)), hsl(var(--secondary)));
+    --gradient-surface: linear-gradient(145deg, hsl(var(--card)), hsl(240 9% 13%));
+    --gradient-hero: radial-gradient(ellipse at top, hsl(240 13% 9%) 0%, hsl(240 13% 7%) 100%);
+    --gradient-mesh: conic-gradient(from 180deg at 50% 50%, hsl(var(--primary)/0.1), hsl(var(--secondary)/0.2), hsl(var(--accent)/0.1));
+
+    /* Shadows */
+    --shadow-sm: 0 1px 3px 0 hsl(240 13% 7% / 0.4);
+    --shadow-md: 0 4px 12px -1px hsl(240 13% 7% / 0.3);
+    --shadow-lg: 0 10px 25px -3px hsl(240 13% 7% / 0.4);
+    --shadow-xl: 0 20px 40px -5px hsl(240 13% 7% / 0.5);
+    --shadow-glow: 0 0 30px hsl(var(--primary)/0.4);
+    --shadow-accent-glow: 0 0 25px hsl(var(--accent)/0.3);
+    --shadow-elegant: 0 8px 32px hsl(240 13% 7% / 0.3);
+    --shadow-inner: inset 0 2px 4px 0 hsl(240 13% 7% / 0.1);
+
+    /* Animations */
+    --animation-duration: 0.3s;
+    --animation-duration-fast: 0.15s;
+    --animation-duration-slow: 0.5s;
+    --animation-curve: cubic-bezier(0.4, 0, 0.2, 1);
+    --animation-bounce: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    --animation-spring: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+
+  .light {
+    /* ----------------------
+       Light Mode Colors
+       ---------------------- */
+    --background: 210 40% 98%;
+    --foreground: 220 30% 10%;
+    --card: 0 0% 100%;
+    --card-foreground: 220 30% 10%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 30% 10%;
+    --primary: 220 100% 45%;
+    --primary-foreground: 0 0% 100%;
+    --primary-glow: 220 100% 55%;
+    --secondary: 155 80% 35%;
+    --secondary-foreground: 0 0% 100%;
+    --accent: 25 100% 50%;
+    --accent-foreground: 0 0% 100%;
+    --muted: 210 30% 90%;
+    --muted-foreground: 220 15% 40%;
+    --destructive: 0 85% 50%;
+    --destructive-foreground: 0 0% 100%;
+    --success: 145 80% 35%;
+    --success-foreground: 0 0% 100%;
+    --warning: 40 100% 45%;
+    --warning-foreground: 0 0% 100%;
+    --border: 220 20% 80%;
+    --input: 220 15% 92%;
+
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-glow)));
+    --gradient-secondary: linear-gradient(135deg, hsl(var(--secondary)), hsl(var(--accent)));
+    --gradient-accent: linear-gradient(135deg, hsl(var(--accent)), hsl(var(--secondary)));
+    --gradient-surface: linear-gradient(145deg, hsl(0 0% 100%), hsl(210 30% 96%));
+    --gradient-hero: linear-gradient(135deg, hsl(220 60% 97%) 0%, hsl(210 50% 95%) 100%);
+    --shadow-glow: 0 0 35px hsl(var(--primary)/0.4);
+    --shadow-accent-glow: 0 0 30px hsl(var(--accent)/0.35);
+    --shadow-elegant: 0 8px 32px hsl(220 100% 45%/0.25);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    background: var(--gradient-hero);
+    background-attachment: fixed;
+    line-height: 1.6;
+  }
+
+  /* Scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-muted;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: var(--gradient-primary);
+    border-radius: 4px;
+  }
+
+  .light ::-webkit-scrollbar-thumb {
+    background: hsl(var(--primary));
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: hsl(var(--primary));
+  }
+
+  /* Reduced motion */
+  @media (prefers-reduced-motion: reduce) {
+    * {
+      animation: none !important;
+      transition: none !important;
+    }
+  }
+}
+
+@layer components {
+
+  /* Glassmorphism */
+  .glass {
+    backdrop-filter: blur(16px) saturate(180%);
+    background: hsl(var(--card)/0.7);
+    border: 1px solid hsl(var(--border)/0.3);
+  }
+
+  .glass-intense {
+    backdrop-filter: blur(24px) saturate(200%);
+    background: hsl(var(--card)/0.8);
+    border: 1px solid hsl(var(--border)/0.4);
+  }
+
+  /* Typography Utilities */
+  .gradient-text {
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .gradient-text-secondary {
+    background: var(--gradient-secondary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .gradient-text-accent {
+    background: var(--gradient-accent);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .text-shadow {
+    text-shadow: 0 2px 4px hsl(var(--foreground)/0.1);
+  }
+
+  .text-glow {
+    text-shadow: 0 0 10px hsl(var(--primary)/0.5);
+  }
+
+  /* Interaction Effects */
+  .hover-glow {
+    transition: all var(--animation-duration) var(--animation-curve);
+  }
+
+  .hover-glow:hover {
+    box-shadow: var(--shadow-glow);
+    transform: translateY(-2px);
+  }
+
+  .hover-lift {
+      transition: all var(--animation-duration) var(--animation-curve);
+    }
+  }
+
+  .hover-lift:hover {
+    transform: translateY(-4px) scale(1.02);
+    box-shadow: var(--shadow-xl);
+  }
+
+  .hover-scale {
+    transition: transform var(--animation-duration-fast) var(--animation-curve);
+  }
+
+  .hover-scale:hover {
+    transform: scale(1.05);
+  }
+
+  /* Animations */
+  .floating {
+    animation: floating 3s ease-in-out infinite;
+  }
+
+  @keyframes floating {
+
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+
+  .pulse-glow {
+    animation: pulseGlow 2s ease-in-out infinite alternate;
+  }
+
+  @keyframes pulseGlow {
+    from {
+      box-shadow: 0 0 20px hsl(var(--primary)/0.3);
+    }
+
+    to {
+      box-shadow: 0 0 30px hsl(var(--primary)/0.6);
+    }
+  }
+
+  .fade-in {
+    animation: fadeIn var(--animation-duration) var(--animation-curve);
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .slide-up {
+    animation: slideUp var(--animation-duration) var(--animation-curve);
+  }
+
+  @keyframes slideUp {
+    from {
+      transform: translateY(100%);
+      opacity: 0;
+    }
+
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  .scale-in {
+    animation: scaleIn var(--animation-duration-fast) var(--animation-spring);
+  }
+
+  @keyframes scaleIn {
+    from {
+      transform: scale(0.8);
+      opacity: 0;
+    }
+
+    to {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+
+  /* Advanced Glow Animation */
+  .animate-pulse-glow {
+    animation: pulseGlowLarge 3s ease-in-out infinite alternate;
+  }
+
+  @keyframes pulseGlowLarge {
+    from { 
+      opacity: 0.4;
+      transform: scale(0.95);
+    }
+    to { 
+      opacity: 0.8;
+      transform: scale(1.05);
+    }
+  }
+
+  /* Cursor Blink Animation */
+  .cursor-blink {
+    animation: cursorBlink 1s step-end infinite;
+  }
+
+  @keyframes cursorBlink {
+    0%, 50% { opacity: 1; }
+    51%, 100% { opacity: 0; }
+  }
+
+  /* Focus & Accessibility */
+  .focus-ring,
+  .focus-visible:focus-visible {
+    @apply outline-none ring-2 ring-primary ring-offset-2 ring-offset-background;
+  }
+
+  /* Buttons */
+  .btn {
+    @apply inline-flex items-center justify-center rounded-md px-4 py-2 text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none;
+  }
+
+  .btn-primary {
+    background: var(--gradient-primary);
+    @apply text-primary-foreground shadow-md hover:shadow-lg;
+  }
+
+  .btn-secondary {
+    background: var(--gradient-secondary);
+    @apply text-secondary-foreground shadow-md hover:shadow-lg;
+  }
+
+  .btn-accent {
+    background: var(--gradient-accent);
+    @apply text-accent-foreground shadow-md hover:shadow-lg;
+  }
+
+  .btn:active {
+    transform: scale(0.98);
+    box-shadow: var(--shadow-sm);
+  }
+
+  /* Badges */
+  .badge {
+    @apply inline-block px-2 py-1 rounded-full text-xs font-semibold;
+  }
+
+  .badge-success {
+    background-color: hsl(var(--success));
+    color: hsl(var(--success-foreground));
+  }
+
+  .badge-warning {
+    background-color: hsl(var(--warning));
+    color: hsl(var(--warning-foreground));
+  }
+
+  .badge-destructive {
+    background-color: hsl(var(--destructive));
+    color: hsl(var(--destructive-foreground));
+  }
+
+  /* Layout Utilities */
+  .container-narrow {
+    @apply max-w-4xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  .container-wide {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  .grid-auto-fit {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+
+  .grid-auto-fill {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  }
+
+  /* Performance */
+  .will-change-transform {
+    will-change: transform;
+  }
+
+  .will-change-opacity {
+    will-change: opacity;
+  }
+
+  .contain-layout {
+    contain: layout;
+  }
+
+  .contain-paint {
+    contain: paint;
+  }

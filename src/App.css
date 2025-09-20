@@ -1,0 +1,30 @@
+/* Portfolio-specific styles */
+
+/* Ensure smooth scroll behavior */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom selection color */
+::selection {
+  background: hsl(var(--primary) / 0.3);
+  color: hsl(var(--primary-foreground));
+}
+
+/* Remove default button focus styles for custom components */
+button:focus-visible {
+  outline: none;
+}
+
+/* Improve text rendering */
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+/* Responsive image optimization */
+img {
+  max-width: 100%;
+  height: auto;
+}
