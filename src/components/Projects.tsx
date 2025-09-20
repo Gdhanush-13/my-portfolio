@@ -93,8 +93,8 @@ const Projects = () => {
       description: "A comprehensive portfolio website showcasing skills, experience, and projects with smooth animations, dark mode toggle, and fully responsive design built with modern web technologies.",
       image: porfolio,
       tech: ["React", "TypeScript", "Tailwind CSS", "Vite", "Framer Motion", "Radix UI"],
-      liveUrl: "#",
-      githubUrl: "https://github.com/Gdhanush-13/Portfolio",
+      liveUrl: "https://dhanush-dev.vercel.app/",
+      githubUrl: "https://github.com/Gdhanush-13/my-portfolio",
       featured: false
     }    
   ];
