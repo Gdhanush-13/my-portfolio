@@ -8,7 +8,7 @@ import chatbot from '@/assets/medical-chatbot.jpg';
 import handpose from '@/assets/handpose-detection-app.jpg';
 import prescripto from '@/assets/prescripto-appointment-app.jpg';
 import porfolio from '@/assets/portfolio-web.jpg';
-import iotproject from '@/assets/iot-project.jpg';
+import iotproject from '@/assets/iot.jpg';
 
 const Projects = () => {
   const [hoveredProject, setHoveredProject] = useState<number | null>(null);
