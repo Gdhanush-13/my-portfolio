@@ -32,8 +32,9 @@ const CTA = () => {
               </h2>
               
               <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
-                Let's collaborate and bring your ideas to life. Whether it's a web application, 
-                mobile app, or complex system architecture, I'm here to help you succeed.
+                Let's collaborate and build high-impact digital experiences. From conversion-focused
+                property websites to scalable full-stack products, I deliver reliable solutions that
+                balance performance, usability, and business outcomes.
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">

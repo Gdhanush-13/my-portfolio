@@ -10,14 +10,18 @@ const Experience = () => {
       location: "Hyderabad, India",
       period: "2024 – Present",
       type: "Full-time",
-      description: "Leading frontend development for RealPage client portals, creating dynamic, responsive, and high-performance web interfaces using React.js, JavaScript, HTML5, and CSS3. Focused on seamless user experiences, fast load times, and accessibility compliance.",
+      description: "Driving frontend engineering for RealPage's enterprise property web experiences by building scalable, accessible, and performance-first interfaces that support high-traffic renter journeys and business-critical leasing workflows.",
       achievements: [
-        "Boosted frontend performance by 30% via lazy loading, code splitting, and optimized resource management",
-        "Designed and implemented fully responsive layouts with Tailwind CSS and Bootstrap across all devices",
-        "Enhanced accessibility scores by applying WCAG standards and performing Lighthouse audits",
-        "Delivered new features on tight deadlines by collaborating closely with cross-functional teams, maintaining high code quality"
+        "Developed and maintained responsive, accessible enterprise property websites using React.js, TypeScript, HTML5, and CSS3, serving 500K+ monthly users across 200+ CMS-driven pages",
+        "Architected a reusable React component library of 40+ production-ready components using Atomic Design principles, accelerating feature delivery by around 30% across teams",
+        "Integrated third-party platforms and backend services via REST APIs to power dynamic listings, real-time availability updates, and tenant-facing workflow continuity",
+        "Improved Lighthouse performance scores by 25+ points by implementing memoization, lazy loading, code splitting, and image optimization guided by DevTools audits",
+        "Standardized UI implementation patterns and frontend quality checks to improve consistency, reduce styling regressions, and streamline onboarding for new contributors",
+        "Partnered with designers and product stakeholders to translate business requirements into polished, conversion-focused user journeys with strong mobile usability",
+        "Collaborated in Agile sprint cycles with QA engineers and product owners, contributing to sprint planning, code reviews, demos, and retrospectives to ensure predictable on-time delivery",
+        "Maintained clean Git workflows and release discipline with peer review and deployment readiness checks, resulting in stable and reliable production rollouts"
       ],
-      technologies: ["React.js", "JavaScript", "HTML5", "CSS3", "Tailwind CSS", "Bootstrap", "REST APIs"]
+      technologies: ["React.js", "TypeScript", "JavaScript", "HTML5", "CSS3", "Atomic Design", "REST APIs", "Lighthouse", "DevTools", "Agile", "Git"]
     },
     {
       title: "Software Development Intern",
@@ -25,14 +29,16 @@ const Experience = () => {
       location: "Hyderabad, India",
       period: "2023 – 2024",
       type: "On-site Internship",
-      description: "Contributed to migrating legacy frontend systems to modern React applications using RAUL UI. Built reusable and scalable components while following best practices and Agile workflows.",
+      description: "Contributed to the modernization of Marketing Center, RealPage's multifamily property marketing platform used by thousands of property managers to manage leads, listings, and renter engagement at scale.",
       achievements: [
-        "Migrated legacy JSP codebase to React.js, improving maintainability and reducing technical debt",
-        "Developed reusable atomic components, reducing development time for new features by 25%",
-        "Implemented unit testing and enforced code standards with Jest and React Testing Library, increasing reliability",
-        "Optimized frontend performance and reduced bundle size via modular design and code refinement"
+        "Led the JSP-to-React migration for key UI modules by rebuilding legacy JavaServer Pages with 1:1 functional parity in a modern React and TypeScript architecture",
+        "Built 20+ production-grade reusable UI components using React, TypeScript, and RAUL (RealPage Asset UI Library), ensuring design consistency across enterprise workflows",
+        "Replicated complex JSP template behaviors into reusable React components while aligning implementation with WCAG accessibility and responsive design standards",
+        "Wrote comprehensive Jest and React Testing Library test suites for migrated components, improving release confidence and reducing regression risk in bi-weekly deployments",
+        "Collaborated in an Agile setup with backend engineers, QA, and senior developers across sprint planning, PR reviews, and cross-functional delivery",
+        "Followed Git branching strategy, code review standards, and CI/CD practices to deliver clean, auditable, and deployment-ready code"
       ],
-      technologies: ["React.js", "JavaScript", "JSP", "RAUL UI", "React Router", "React Hooks", "Jest", "ESLint"]
+      technologies: ["React.js", "TypeScript", "JSP", "RAUL UI", "Jest", "React Testing Library", "WCAG", "CI/CD", "Agile", "Git"]
     }
   ];
 

@@ -88,7 +88,7 @@ const Contact: React.FC = () => {
       icon: MapPin,
       label: "Location",
       value: "Hyderabad, India",
-      href: "#"
+      href: ""
     }
   ];
 
@@ -134,23 +134,42 @@ const Contact: React.FC = () => {
               <CardContent className="p-8">
                 <h3 className="text-2xl font-bold mb-6">Let's Connect</h3>
                 <div className="space-y-6">
-                  {contactInfo.map((info) => (
-                    <a
-                      key={info.label}
-                      href={info.href}
-                      className="flex items-center space-x-4 p-4 rounded-lg hover:bg-muted/50 transition-colors group"
-                    >
-                      <div className="flex-shrink-0">
-                        <div className="w-12 h-12 bg-gradient-primary rounded-full flex items-center justify-center group-hover:shadow-glow transition-all">
-                          <info.icon className="h-6 w-6 text-primary-foreground" />
+                  {contactInfo.map((info) => {
+                    const content = (
+                      <>
+                        <div className="flex-shrink-0">
+                          <div className="w-12 h-12 bg-gradient-primary rounded-full flex items-center justify-center group-hover:shadow-glow transition-all">
+                            <info.icon className="h-6 w-6 text-primary-foreground" />
+                          </div>
                         </div>
-                      </div>
-                      <div>
-                        <p className="text-sm text-muted-foreground">{info.label}</p>
-                        <p className="font-medium">{info.value}</p>
-                      </div>
-                    </a>
-                  ))}
+                        <div>
+                          <p className="text-sm text-muted-foreground">{info.label}</p>
+                          <p className="font-medium">{info.value}</p>
+                        </div>
+                      </>
+                    );
+
+                    if (!info.href) {
+                      return (
+                        <div
+                          key={info.label}
+                          className="flex items-center space-x-4 p-4 rounded-lg bg-muted/20"
+                        >
+                          {content}
+                        </div>
+                      );
+                    }
+
+                    return (
+                      <a
+                        key={info.label}
+                        href={info.href}
+                        className="flex items-center space-x-4 p-4 rounded-lg hover:bg-muted/50 transition-colors group"
+                      >
+                        {content}
+                      </a>
+                    );
+                  })}
                 </div>
               </CardContent>
             </Card>
@@ -164,6 +183,7 @@ const Contact: React.FC = () => {
                     <a
                       key={social.label}
                       href={social.href}
+                      aria-label={`Open ${social.label} profile`}
                       className={`w-12 h-12 rounded-full bg-muted/50 flex items-center justify-center transition-all hover-glow ${social.color}`}
                       target="_blank"
                       rel="noopener noreferrer"

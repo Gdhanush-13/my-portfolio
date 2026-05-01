@@ -1,7 +1,10 @@
 import { Code, Coffee, Lightbulb, Zap } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
+import { useGithubProfile } from '@/hooks/useGithubProfile';
 
 const About = () => {
+  const { publicRepos } = useGithubProfile();
+
   const highlights = [
     {
       icon: Code,
@@ -84,8 +87,8 @@ const About = () => {
                   <span className="font-bold text-primary">15+</span>
                 </div>
                 <div className="flex justify-between items-center">
-                  <span className="text-muted-foreground">Coffee Cups Consumed</span>
-                  <span className="font-bold text-primary">∞</span>
+                  <span className="text-muted-foreground">GitHub Repositories</span>
+                  <span className="font-bold text-primary">{publicRepos ?? '...'}</span>
                 </div>
               </div>
             </div>
