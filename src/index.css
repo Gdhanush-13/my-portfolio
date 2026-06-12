@@ -212,8 +212,7 @@
   }
 
   .hover-lift {
-      transition: all var(--animation-duration) var(--animation-curve);
-    }
+    transition: all var(--animation-duration) var(--animation-curve);
   }
 
   .hover-lift:hover {
@@ -418,3 +417,4 @@
   .contain-paint {
     contain: paint;
   }
+}

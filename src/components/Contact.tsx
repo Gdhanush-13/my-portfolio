@@ -130,7 +130,7 @@ const Contact: React.FC = () => {
         <div className="grid lg:grid-cols-3 gap-12">
           {/* Contact Information */}
           <div className="lg:col-span-1">
-            <Card className="glass border-0 mb-8 animate-fade-up min-w-[300px] sm:min-w-[380px]" style={{ animationDelay: '0.2s' }}>
+            <Card className="glass border-0 mb-8 animate-fade-up" style={{ animationDelay: '0.2s' }}>
               <CardContent className="p-8">
                 <h3 className="text-2xl font-bold mb-6">Let's Connect</h3>
                 <div className="space-y-6">
@@ -175,7 +175,7 @@ const Contact: React.FC = () => {
             </Card>
 
             {/* Social Links */}
-            <Card className="glass border-0 animate-fade-up min-w-[300px] sm:min-w-[380px]" style={{ animationDelay: '0.4s' }}>
+            <Card className="glass border-0 animate-fade-up" style={{ animationDelay: '0.4s' }}>
               <CardContent className="p-8">
                 <h3 className="text-xl font-display font-bold mb-6">Follow Me</h3>
                 <div className="flex space-x-4">

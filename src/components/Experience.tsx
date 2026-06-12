@@ -1,4 +1,4 @@
-import { Calendar, MapPin, ExternalLink } from 'lucide-react';
+import { Calendar, MapPin, ChevronRight } from 'lucide-react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 
@@ -96,7 +96,7 @@ const Experience = () => {
                   <ul className="space-y-2">
                     {experience.achievements.map((achievement, idx) => (
                       <li key={idx} className="flex items-start gap-2 text-muted-foreground">
-                        <ExternalLink className="h-4 w-4 mt-0.5 text-primary flex-shrink-0" />
+                        <ChevronRight className="h-4 w-4 mt-0.5 text-primary flex-shrink-0" />
                         {achievement}
                       </li>
                     ))}

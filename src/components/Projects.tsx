@@ -9,11 +9,21 @@ import handpose from '@/assets/handpose-detection-app.jpg';
 import prescripto from '@/assets/prescripto-appointment-app.jpg';
 import porfolio from '@/assets/portfolio-web.jpg';
 import iotproject from '@/assets/iot.jpg';
+import financeOS from '@/assets/finance-os.jpg';
 
 const Projects = () => {
   const [hoveredProject, setHoveredProject] = useState<number | null>(null);
 
   const projects = [
+    {
+      title: "Finance OS",
+      description: "A full-stack personal finance management app built with Next.js 14 and Express 5 + MongoDB. Track accounts, plan budgets, hit savings goals, and visualize cashflow — all in one calm dashboard. Features JWT httpOnly cookie auth, silent token refresh, optimistic UI updates, CSV import/export, recurring transactions via node-cron, and a full test suite (Jest + Vitest).",
+      image: financeOS,
+      tech: ["Next.js 14", "TypeScript", "Tailwind CSS", "shadcn/ui", "TanStack Query", "Recharts", "Express 5", "MongoDB", "Mongoose", "JWT", "Zod", "node-cron"],
+      liveUrl: "#",
+      githubUrl: "https://github.com/Gdhanush-13/finance-os",
+      featured: true
+    },
     {
       title: "Tomato Food Delivery App (MERN)",
       description: "A full-stack food delivery platform built with the MERN stack and integrated with Stripe for seamless payments. Includes a user-facing app, admin dashboard, secure backend API, and a responsive UI for an enhanced food ordering experience.",
@@ -53,15 +63,6 @@ const Projects = () => {
       featured: true
     },
     {
-      title: "AI Chat Assistant",
-      description: "An intelligent chat assistant with natural language processing, context awareness, and multi-language support.",
-      image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=600&h=400&fit=crop",
-      tech: ["React", "Python", "FastAPI", "OpenAI", "WebSockets"],
-      liveUrl: "#",
-      githubUrl: "#",
-      featured: true
-    },
-    {
       title: "Automated Room Light Controller with Visitor Counter",
       description: "An Arduino-based project that uses IR sensors to count people entering and leaving a room, automatically turning the lights on or off based on occupancy. The current count is displayed in real-time.",
       image: iotproject,
@@ -69,24 +70,6 @@ const Projects = () => {
       liveUrl: "#",
       githubUrl: "https://github.com/Gdhanush-13/IOT-Automated-Room-Light-Controller-with-Visitor-Counter",
       featured: true
-    },
-    {
-      title: "Weather Dashboard",
-      description: "A beautiful weather dashboard with location-based forecasts, interactive maps, and historical weather data visualization.",
-      image: "https://images.unsplash.com/photo-1504608524841-42fe6f032b4b?w=600&h=400&fit=crop",
-      tech: ["Vue.js", "Chart.js", "OpenWeather API", "CSS Grid"],
-      liveUrl: "#",
-      githubUrl: "#",
-      featured: false
-    },
-    {
-      title: "Social Media Analytics",
-      description: "An analytics dashboard for social media managers with real-time metrics, engagement tracking, and automated reporting.",
-      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop",
-      tech: ["React", "D3.js", "Express", "MongoDB", "JWT"],
-      liveUrl: "#",
-      githubUrl: "#",
-      featured: false
     },
     {
       title: "Modern Developer Portfolio",

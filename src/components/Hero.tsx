@@ -3,23 +3,32 @@ import { ChevronDown, Github, Linkedin, Mail, Code } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import heroImage from '@/assets/hero-bg.jpg';
 
-const Hero = () => {
-  const roles = [
-    "Software Engineer",
-    "Full-Stack Developer",
-    "Open Source Contributor",
-    "AI/ML Enthusiast",
-    "Problem Solver",
-    "Tech Explorer"
-  ];
+const ROLES = [
+  "Software Engineer",
+  "Full-Stack Developer",
+  "Open Source Contributor",
+  "AI/ML Enthusiast",
+  "Problem Solver",
+  "Tech Explorer"
+];
 
+const FLOAT_POSITIONS = [
+  { left: '10%', top: '15%', delay: '0s', duration: '5s' },
+  { left: '25%', top: '70%', delay: '1s', duration: '6s' },
+  { left: '50%', top: '20%', delay: '2s', duration: '7s' },
+  { left: '70%', top: '55%', delay: '0.5s', duration: '5.5s' },
+  { left: '85%', top: '30%', delay: '1.5s', duration: '6.5s' },
+  { left: '40%', top: '85%', delay: '3s', duration: '8s' },
+];
+
+const Hero = () => {
   const [typedText, setTypedText] = useState('');
   const [roleIndex, setRoleIndex] = useState(0);
   const [charIndex, setCharIndex] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
 
   useEffect(() => {
-    const currentRole = roles[roleIndex];
+    const currentRole = ROLES[roleIndex];
     let typingSpeed = isDeleting ? 50 : 120;
 
     const handleTyping = () => {
@@ -33,13 +42,13 @@ const Hero = () => {
         setTimeout(() => setIsDeleting(true), 1000);
       } else if (isDeleting && charIndex === 0) {
         setIsDeleting(false);
-        setRoleIndex((prev) => (prev + 1) % roles.length);
+        setRoleIndex((prev) => (prev + 1) % ROLES.length);
       }
     };
 
     const timer = setTimeout(handleTyping, typingSpeed);
     return () => clearTimeout(timer);
-  }, [charIndex, isDeleting, roleIndex, roles]);
+  }, [charIndex, isDeleting, roleIndex]);
 
   const scrollToNext = () => {
     const aboutSection = document.getElementById('about');
@@ -62,15 +71,15 @@ const Hero = () => {
 
       {/* Floating Elements */}
       <div className="absolute inset-0 z-10 pointer-events-none">
-        {[...Array(6)].map((_, i) => (
+        {FLOAT_POSITIONS.map((pos, i) => (
           <div
             key={i}
             className="absolute w-2 h-2 bg-primary/30 rounded-full floating opacity-50"
             style={{
-              left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100}%`,
-              animationDelay: `${Math.random() * 4}s`,
-              animationDuration: `${5 + Math.random() * 3}s`
+              left: pos.left,
+              top: pos.top,
+              animationDelay: pos.delay,
+              animationDuration: pos.duration
             }}
           />
         ))}

@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import type { ReactElement } from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Progress } from '@/components/ui/progress';
@@ -8,12 +9,12 @@ import { Code2, Cloud, Server, Terminal } from 'lucide-react';
 interface Skill {
   name: string;
   level: number;
-  icon: string | JSX.Element;
+  icon: string | ReactElement;
 }
 
 interface SkillCategory {
   category: string;
-  icon: JSX.Element;
+  icon: ReactElement;
   skills: Skill[];
 }
 
@@ -172,11 +173,13 @@ const Skills = () => {
           <div className="flex flex-wrap justify-center gap-3">
             {[
               // Frontend
-              "TypeScript", "Redux", "React Query", "Material UI", "Framer Motion",
+              "TypeScript", "Redux", "React Query", "shadcn/ui", "Material UI", "Framer Motion", "Recharts",
+              // Forms & Validation
+              "React Hook Form", "Zod", "Axios",
               // Backend
-              "JWT Authentication", "GraphQL", "Spring Boot", "Express.js", "Microservices", "WebSockets",
+              "JWT Authentication", "GraphQL", "Spring Boot", "Express.js", "Microservices", "WebSockets", "node-cron",
               // Testing
-              "Jest", "Cypress", "React Testing Library",
+              "Jest", "Vitest", "Cypress", "React Testing Library", "Supertest",
               // Build/Tools
               "Webpack", "Vite", "ESLint", "Prettier", "Postman",
               // Deployment
