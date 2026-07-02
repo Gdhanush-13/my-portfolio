@@ -63,8 +63,9 @@ const About = () => {
               </p>
               <p>
                 Outside of work, I’m constantly upskilling in areas like DevOps, Docker, Kubernetes,
-                and AI integration. I enjoy experimenting with new frameworks, building personal SaaS
-                tools, and collaborating on innovative ideas that blend performance with user-centric design.
+                and AI engineering — building RAG pipelines with FastAPI, ChromaDB, and sentence-transformers,
+                experimenting with LLMs (OpenAI, HuggingFace) for finance and healthcare assistants, and
+                exploring DevOps workflows with Docker and Temporal.io.
               </p>
             </div>
           </div>

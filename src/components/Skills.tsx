@@ -3,7 +3,7 @@ import type { ReactElement } from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Progress } from '@/components/ui/progress';
-import { Code2, Cloud, Server, Terminal } from 'lucide-react';
+import { Code2, Cloud, Server, Terminal, Brain } from 'lucide-react';
 
 // TypeScript Interfaces
 interface Skill {
@@ -60,6 +60,17 @@ const Skills = () => {
         { name: "Git / GitHub", level: 95, icon: "🌿" },
         { name: "CI/CD Pipelines", level: 85, icon: "🔁" },
         { name: "VS Code", level: 95, icon: "🖥️" }
+      ]
+    },
+    {
+      category: "AI & Machine Learning",
+      icon: <Brain className="w-6 h-6" />,
+      skills: [
+        { name: "RAG Pipelines", level: 85, icon: "🔍" },
+        { name: "FastAPI", level: 85, icon: "⚡" },
+        { name: "ChromaDB / Milvus", level: 80, icon: "🗃️" },
+        { name: "OpenAI API / LLMs", level: 80, icon: "🤖" },
+        { name: "sentence-transformers", level: 75, icon: "🧠" }
       ]
     }
   ];
@@ -183,7 +194,9 @@ const Skills = () => {
               // Build/Tools
               "Webpack", "Vite", "ESLint", "Prettier", "Postman",
               // Deployment
-              "Netlify", "Render", "Vercel", "Serverless"
+              "Netlify", "Render", "Vercel", "Serverless",
+              // AI / ML
+              "LangChain", "Vector Databases", "pypdf", "Temporal.io", "HuggingFace", "NLP", "Embeddings", "Prompt Engineering"
             ].map((tech, index) => (
               <Badge
                 key={tech}
