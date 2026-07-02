@@ -85,19 +85,19 @@ const Skills = () => {
 
   const SkillBar = ({ skill, index }: { skill: Skill; index: number }) => (
     <div
-      className="group mb-6 animate-fade-up"
+      className="group mb-3 animate-fade-up"
       style={{ animationDelay: `${index * 0.1}s` }}
       onMouseEnter={() => setHoveredSkill(skill.name)}
       onMouseLeave={() => setHoveredSkill(null)}
     >
-      <div className="flex items-center justify-between mb-3">
-        <div className="flex items-center gap-3">
-          <span className="text-2xl">{skill.icon}</span>
-          <span className="font-medium text-foreground group-hover:text-primary transition-colors">
+      <div className="flex items-center justify-between mb-1">
+        <div className="flex items-center gap-2">
+          <span className="text-lg">{skill.icon}</span>
+          <span className="text-xs sm:text-sm font-medium text-foreground group-hover:text-primary transition-colors">
             {skill.name}
           </span>
         </div>
-        <span className="text-sm font-bold text-primary">{skill.level}%</span>
+        <span className="text-xs font-bold text-primary">{skill.level}%</span>
       </div>
       <Progress
         value={skill.level}
@@ -156,17 +156,17 @@ const Skills = () => {
         </div>
 
         {/* Skills Categories */}
-        <div className="grid lg:grid-cols-3 gap-8 mb-16">
+        <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-4 mb-16">
           {skillCategories.map((category, categoryIndex) => (
             <Card
               key={category.category}
               className="glass border-0 hover-glow animate-fade-up"
               style={{ animationDelay: `${categoryIndex * 0.2 + 0.2}s` }}
             >
-              <CardContent className="p-8">
-                <div className="flex items-center justify-center gap-3 mb-6">
+              <CardContent className="p-4 sm:p-6">
+                <div className="flex items-center justify-center gap-2 mb-4">
                   <div className="text-primary">{category.icon}</div>
-                  <h3 className="text-2xl font-display font-bold gradient-text">
+                  <h3 className="text-base sm:text-lg font-display font-bold gradient-text text-center leading-tight">
                     {category.category}
                   </h3>
                 </div>
