@@ -79,7 +79,34 @@ const Projects = () => {
       liveUrl: "https://dhanush-dev.vercel.app/",
       githubUrl: "https://github.com/Gdhanush-13/my-portfolio",
       featured: false
-    }    
+    },
+    {
+      title: "AI Due Diligence Copilot",
+      description: "A RAG platform that analyzes company filings, financial statements, investor presentations, and market reports to deliver source-backed risk assessments, growth opportunities, and executive summaries in seconds. Features semantic chunking, free embeddings via sentence-transformers, persistent ChromaDB vector store, and structured AI output.",
+      imageUrl: "https://opengraph.githubassets.com/1/Gdhanush-13/ai-due-diligence-copilot",
+      tech: ["Python", "FastAPI", "ChromaDB", "sentence-transformers", "OpenAI GPT-4o-mini", "pypdf", "Vanilla JS"],
+      liveUrl: "#",
+      githubUrl: "https://github.com/Gdhanush-13/ai-due-diligence-copilot",
+      featured: false
+    },
+    {
+      title: "RAG Doc Chatbot",
+      description: "A full-stack Retrieval-Augmented Generation application. Upload any PDF, TXT, or Markdown file and ask questions — answers are grounded in your documents with source citations. Features semantic chunking with sliding window overlap, free embeddings, persistent ChromaDB store, and a clean React chat UI with dark mode and drag-and-drop upload.",
+      imageUrl: "https://opengraph.githubassets.com/1/Gdhanush-13/rag-doc-chatbot",
+      tech: ["Python", "FastAPI", "ChromaDB", "sentence-transformers", "OpenAI", "React 18", "TypeScript", "Tailwind CSS", "Vite"],
+      liveUrl: "#",
+      githubUrl: "https://github.com/Gdhanush-13/rag-doc-chatbot",
+      featured: false
+    },
+    {
+      title: "Healthcare Knowledge Navigator",
+      description: "A medical RAG assistant that retrieves and synthesizes information from clinical guidelines, research papers, and treatment protocols. Delivers evidence-based answers with evidence-level classification (RCT > Cohort > Case report), confidence scoring, and source citations — all grounded in uploaded medical documents.",
+      imageUrl: "https://opengraph.githubassets.com/1/Gdhanush-13/healthcare-knowledge-navigator",
+      tech: ["Python", "FastAPI", "ChromaDB", "sentence-transformers", "OpenAI GPT-4o-mini", "pypdf", "Vanilla JS"],
+      liveUrl: "#",
+      githubUrl: "https://github.com/Gdhanush-13/healthcare-knowledge-navigator",
+      featured: false
+    }
   ];
 
   const featuredProjects = projects.filter(p => p.featured);
@@ -94,11 +121,19 @@ const Projects = () => {
       onMouseLeave={() => setHoveredProject(null)}
     >
       <div className="relative overflow-hidden">
-        <img
-          src={project.image}
-          alt={project.title}
-          className="w-full h-48 p-2 object-contain bg-background transition-transform duration-300 group-hover:scale-105"
-        />
+        {project.imageUrl ? (
+          <img
+            src={project.imageUrl}
+            alt={project.title}
+            className="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-105"
+          />
+        ) : project.image ? (
+          <img
+            src={project.image}
+            alt={project.title}
+            className="w-full h-48 p-2 object-contain bg-background transition-transform duration-300 group-hover:scale-105"
+          />
+        ) : null}
         <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
 
         {/* Overlay Actions */}
