@@ -20,7 +20,7 @@ const Projects = () => {
       description: "A full-stack personal finance management app built with Next.js 14 and Express 5 + MongoDB. Track accounts, plan budgets, hit savings goals, and visualize cashflow — all in one calm dashboard. Features JWT httpOnly cookie auth, silent token refresh, optimistic UI updates, CSV import/export, recurring transactions via node-cron, and a full test suite (Jest + Vitest).",
       image: financeOS,
       tech: ["Next.js 14", "TypeScript", "Tailwind CSS", "shadcn/ui", "TanStack Query", "Recharts", "Express 5", "MongoDB", "Mongoose", "JWT", "Zod", "node-cron"],
-      liveUrl: "#",
+      liveUrl: "https://finance-os-next.vercel.app/",
       githubUrl: "https://github.com/Gdhanush-13/finance-os",
       featured: true
     },
