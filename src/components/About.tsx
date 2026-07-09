@@ -36,11 +36,10 @@ const About = () => {
             About <span className="gradient-text">Me</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            I’m a passionate technologist who believes in the power of clean code,
-            thoughtful design, and seamless user experiences. My journey began with
-            curiosity and has grown into a dedication to crafting meaningful digital
-            solutions that create real impact. Driven by continuous learning and
-            creativity, I strive to bring both innovation and clarity to everything I build.
+            Software Engineer with 3+ years shipping full-stack React and Node.js applications
+            at enterprise scale, with a growing specialization in AI engineering: RAG pipelines,
+            LLM tooling, and vector databases. I care about clean architecture, code quality,
+            and building products that actually work in production.
           </p>
         </div>
 
@@ -49,17 +48,17 @@ const About = () => {
           <div className="animate-fade-up" style={{ animationDelay: '0.2s' }}>
             <h3 className="text-2xl font-bold mb-6">My Journey</h3>
             <div
-              className="space-y-4 text-muted-foreground leading-relaxed"
-              style={{ textAlign: 'justify' }}>
+              className="space-y-4 text-muted-foreground leading-relaxed">
               <p>
                 My coding journey began in college, but it truly took shape when I started building
                 real-world applications during my internships and project work. Those early hands-on
                 experiences sparked a strong passion for creating scalable and impactful web solutions.
               </p>
               <p>
-                Currently, I work as a Website Implementation Specialist at RealPage, where I specialize
-                in delivering full-stack solutions using modern technologies like React, Node.js, and
-                cloud platforms such as Azure. I thrive on bridging the gap between UI design, backend logic, and system architecture.
+                Today I work as a Software Engineer at RealPage, building enterprise-grade React
+                applications used by property managers across the US. I own features end-to-end --
+                from design handoff to production deployment -- collaborating across frontend, backend,
+                and Azure DevOps.
               </p>
               <p>
                 Outside of work, I’m constantly upskilling in areas like DevOps, Docker, Kubernetes,
@@ -77,7 +76,7 @@ const About = () => {
               <div className="space-y-4">
                 <div className="flex justify-between items-center">
                   <span className="text-muted-foreground">Years of Experience</span>
-                  <span className="font-bold text-primary">2+</span>
+                  <span className="font-bold text-primary">3+</span>
                 </div>
                 <div className="flex justify-between items-center">
                   <span className="text-muted-foreground">Projects Completed</span>
@@ -85,7 +84,7 @@ const About = () => {
                 </div>
                 <div className="flex justify-between items-center">
                   <span className="text-muted-foreground">Technologies Mastered</span>
-                  <span className="font-bold text-primary">15+</span>
+                  <span className="font-bold text-primary">25+</span>
                 </div>
                 <div className="flex justify-between items-center">
                   <span className="text-muted-foreground">GitHub Repositories</span>

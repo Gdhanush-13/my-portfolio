@@ -25,6 +25,12 @@ interface ProgrammingLanguage {
   color: string;
 }
 
+const getTier = (level: number) => {
+  if (level >= 90) return 'Expert';
+  if (level >= 75) return 'Proficient';
+  return 'Familiar';
+};
+
 const Skills = () => {
   const [hoveredSkill, setHoveredSkill] = useState<string | null>(null);
 
@@ -59,7 +65,7 @@ const Skills = () => {
         { name: "Docker", level: 85, icon: "🐳" },
         { name: "Git / GitHub", level: 95, icon: "🌿" },
         { name: "CI/CD Pipelines", level: 85, icon: "🔁" },
-        { name: "VS Code", level: 95, icon: "🖥️" }
+        { name: "Linux / Bash", level: 80, icon: "�" }
       ]
     },
     {
@@ -70,7 +76,7 @@ const Skills = () => {
         { name: "FastAPI", level: 85, icon: "⚡" },
         { name: "ChromaDB / Milvus", level: 80, icon: "🗃️" },
         { name: "OpenAI API / LLMs", level: 80, icon: "🤖" },
-        { name: "sentence-transformers", level: 75, icon: "🧠" }
+        { name: "Sentence Transformers", level: 75, icon: "🧠" }
       ]
     }
   ];
@@ -97,7 +103,7 @@ const Skills = () => {
             {skill.name}
           </span>
         </div>
-        <span className="text-xs font-bold text-primary">{skill.level}%</span>
+        <span className="text-xs font-bold text-primary">{getTier(skill.level)}</span>
       </div>
       <Progress
         value={skill.level}
@@ -156,7 +162,7 @@ const Skills = () => {
         </div>
 
         {/* Skills Categories */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-4 mb-16">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-16">
           {skillCategories.map((category, categoryIndex) => (
             <Card
               key={category.category}
@@ -221,11 +227,11 @@ const Skills = () => {
             </div>
             <CardContent className="p-6 font-mono text-sm bg-card/50">
               <div className="space-y-2">
-                <div className="text-green-400">$ npx create-awesome-project</div>
-                <div className="text-muted-foreground">✨ Creating magical user experiences...</div>
-                <div className="text-muted-foreground">🚀 Optimizing for performance...</div>
-                <div className="text-muted-foreground">🎨 Applying beautiful design...</div>
-                <div className="text-primary">✅ Project ready! Let's build something amazing.</div>
+                <div className="text-green-400">$ git clone github.com/Gdhanush-13/rag-doc-chatbot</div>
+                <div className="text-green-400">$ uvicorn main:app --reload</div>
+                <div className="text-muted-foreground">� Indexing documents into ChromaDB...</div>
+                <div className="text-muted-foreground">⚡ FastAPI server ready on :8000</div>
+                <div className="text-primary">✅ RAG pipeline live. Ask me anything.</div>
                 <div className="text-green-400 animate-blink">▊</div>
               </div>
             </CardContent>

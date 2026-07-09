@@ -6,7 +6,6 @@ import Education from '@/components/Education';
 import Experience from '@/components/Experience';
 import Projects from '@/components/Projects';
 import OpenSource from '@/components/OpenSource';
-import Testimonials from '@/components/Testimonials';
 import CTA from '@/components/CTA';
 import Contact from '@/components/Contact';
 import Footer from '@/components/Footer';

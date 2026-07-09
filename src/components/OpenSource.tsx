@@ -10,23 +10,23 @@ const OpenSource = () => {
   const contributionHighlights = [
     {
       icon: GitPullRequest,
-      title: 'Active Repository Builder',
+      title: 'Open Source Contributions',
       description:
-        'Built and shipped multiple public projects across web, full-stack, and applied AI domains, with production-ready code and documentation.',
-      tags: ['TypeScript', 'React', 'Node.js', 'MERN']
+        'Forked and contributed to major open source projects including next.js (Vercel), react-spectrum (Adobe), ant-design (Alibaba), typeorm, drizzle-orm, heroui, and formatjs.',
+      tags: ['Next.js', 'React Spectrum', 'Ant Design', 'TypeORM']
     },
     {
       icon: Users,
-      title: 'Collaboration Through Pull Requests',
+      title: 'Shipped Across Full Stack & AI',
       description:
-        'Consistently contribute through pull-request-based workflows and collaborative development practices reflected in GitHub achievements.',
-      tags: ['Pull Requests', 'Code Review', 'Teamwork']
+        'Built and shipped production-ready projects spanning React/Next.js frontends, Node.js/Express backends, and Python RAG pipelines — with live deployments on Vercel and Render.',
+      tags: ['React', 'FastAPI', 'RAG', 'Python', 'TypeScript']
     },
     {
       icon: Award,
       title: 'GitHub Achievement Recognition',
       description:
-        'Earned GitHub achievements including Quickdraw, Pull Shark, and Pair Extraordinaire for contribution quality and collaboration.',
+        'Earned GitHub achievements including Quickdraw, Pull Shark, and Pair Extraordinaire for contribution quality and consistent open-source collaboration.',
       tags: ['Quickdraw', 'Pull Shark', 'Pair Extraordinaire']
     }
   ];
@@ -82,8 +82,8 @@ const OpenSource = () => {
               <p className="text-sm text-muted-foreground mt-1">GitHub Achievements</p>
             </div>
             <div>
-              <p className="text-3xl font-bold text-primary">MERN</p>
-              <p className="text-sm text-muted-foreground mt-1">Core Contribution Stack</p>
+              <p className="text-3xl font-bold text-primary">7+</p>
+              <p className="text-sm text-muted-foreground mt-1">Major OSS Repos Forked</p>
             </div>
             <div>
               <p className="text-3xl font-bold text-primary">Active</p>

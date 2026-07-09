@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Mail, Phone, MapPin, Send, Github, Linkedin, Code } from 'lucide-react';
+import { Mail, MapPin, Send, Github, Linkedin, Code, Briefcase } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
@@ -79,15 +79,15 @@ const Contact: React.FC = () => {
       href: "mailto:dhanushdhanu1300@gmail.com"
     },
     {
-      icon: Phone,
-      label: "Phone",
-      value: "+91 9493675109",
-      href: "tel:+919493675109"
-    },
-    {
       icon: MapPin,
       label: "Location",
       value: "Hyderabad, India",
+      href: ""
+    },
+    {
+      icon: Briefcase,
+      label: "Available For",
+      value: "Full-time & Freelance",
       href: ""
     }
   ];
@@ -102,7 +102,7 @@ const Contact: React.FC = () => {
     {
       icon: Linkedin,
       label: "LinkedIn",
-      href: "https://www.linkedin.com/in/dhanush-750bb0243/",
+      href: "https://www.linkedin.com/in/dhanush-guddala/",
       color: "hover:text-blue-400"
     },
     {

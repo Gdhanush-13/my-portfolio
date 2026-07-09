@@ -31,20 +31,6 @@ const Education = () => {
         "Participated in inter-college quiz and coding contests"
       ],
       coursework: ["Advanced Mathematics", "Physics", "Chemistry", "English"]
-    },
-    {
-      degree: "Secondary School Certificate (10th Grade)",
-      institution: "Vivekananda High School",
-      location: "Hyderabad, India",
-      duration: "2008 - 2018",
-      grade: "9.5 GPA",
-      description: "Completed primary and secondary schooling with distinction. Took early interest in technology and logical problem-solving.",
-      achievements: [
-        "Class topper in multiple academic years",
-        "Won district-level science fair project",
-        "Managed logistics for school-level academic and cultural events"
-      ],
-      coursework: ["Advanced Mathematics", "Physics", "Chemistry", "Computer Science", "English"]
     }
   ];
 

@@ -25,18 +25,26 @@ const Projects = () => {
       featured: true
     },
     {
-      title: "Tomato Food Delivery App (MERN)",
-      description: "A full-stack food delivery platform built with the MERN stack and integrated with Stripe for seamless payments. Includes a user-facing app, admin dashboard, secure backend API, and a responsive UI for an enhanced food ordering experience.",
-      image: tomato,
-      tech: ["React", "Node.js", "Express", "MongoDB", "Stripe", "JWT", "Mongoose"],
-      liveUrl: "https://food-del-frontend-cfck.onrender.com/",
-      githubUrl: "https://github.com/Gdhanush-13/Food-del",
+      title: "AI Due Diligence Copilot",
+      description: "A RAG platform that analyzes company filings, financial statements, investor presentations, and market reports to deliver source-backed risk assessments, growth opportunities, and executive summaries in seconds. Features semantic chunking, free embeddings via Sentence Transformers, persistent ChromaDB vector store, and structured AI output.",
+      imageUrl: "https://opengraph.githubassets.com/1/Gdhanush-13/ai-due-diligence-copilot",
+      tech: ["Python", "FastAPI", "ChromaDB", "Sentence Transformers", "OpenAI GPT-4o-mini", "pypdf", "Vanilla JS"],
+      liveUrl: "#",
+      githubUrl: "https://github.com/Gdhanush-13/ai-due-diligence-copilot",
+      featured: true
+    },
+    {
+      title: "RAG Doc Chatbot",
+      description: "A full-stack Retrieval-Augmented Generation application. Upload any PDF, TXT, or Markdown file and ask questions — answers are grounded in your documents with source citations. Features semantic chunking with sliding window overlap, free embeddings, persistent ChromaDB store, and a clean React chat UI with dark mode and drag-and-drop upload.",
+      imageUrl: "https://opengraph.githubassets.com/1/Gdhanush-13/rag-doc-chatbot",
+      tech: ["Python", "FastAPI", "ChromaDB", "Sentence Transformers", "OpenAI", "React 18", "TypeScript", "Tailwind CSS", "Vite"],
+      liveUrl: "#",
+      githubUrl: "https://github.com/Gdhanush-13/rag-doc-chatbot",
       featured: true
     },
     {
       title: "Medical Chatbot with N-Gram & TF-IDF",
-      description:
-        "An advanced medical chatbot that leverages NLP techniques like N-Gram and TF-IDF for accurate symptom extraction and disease prediction using Random Forest and CNN models. Features include speech-to-text, personalized medical guidance, and real-time predictions.",
+      description: "An advanced medical chatbot that leverages NLP techniques like N-Gram and TF-IDF for accurate symptom extraction and disease prediction using Random Forest and CNN models. Features include speech-to-text, personalized medical guidance, and real-time predictions.",
       image: chatbot,
       tech: ["Python", "Scikit-learn", "TensorFlow", "Keras", "N-Gram", "TF-IDF", "Random Forest", "CNN", "Speech Recognition"],
       liveUrl: "#",
@@ -44,14 +52,13 @@ const Projects = () => {
       featured: true
     },
     {
-      title: "Prescripto Appointment App (MERN)",
-      description:
-        "A full-stack medical appointment platform built using the MERN stack (MongoDB, Express, React, Node.js). Users can browse doctors, book appointments, and manage profiles, while admins can manage doctor availability, appointments, and dashboard analytics. Features include JWT authentication, responsive UI, and secure API endpoints.",
-      image: prescripto,
-      tech: ["React.js", "Vite", "Node.js", "Express.js", "MongoDB", "JWT", "Axios", "Cloudinary", "Admin Panel"],
-      liveUrl: "https://prescripto-appointment.onrender.com/",
-      githubUrl: "https://github.com/Gdhanush-13/Prescripto-Appointment",
-      featured: true
+      title: "Healthcare Knowledge Navigator",
+      description: "A medical RAG assistant that retrieves and synthesizes information from clinical guidelines, research papers, and treatment protocols. Delivers evidence-based answers with evidence-level classification (RCT > Cohort > Case report), confidence scoring, and source citations.",
+      imageUrl: "https://opengraph.githubassets.com/1/Gdhanush-13/healthcare-knowledge-navigator",
+      tech: ["Python", "FastAPI", "ChromaDB", "Sentence Transformers", "OpenAI GPT-4o-mini", "pypdf", "Vanilla JS"],
+      liveUrl: "#",
+      githubUrl: "https://github.com/Gdhanush-13/healthcare-knowledge-navigator",
+      featured: false
     },
     {
       title: "HandPose Detection App",
@@ -60,51 +67,42 @@ const Projects = () => {
       tech: ["React.js", "TensorFlow.js", "MediaPipe", "Webcam API", "JavaScript"],
       liveUrl: "https://handpose-detection-app.onrender.com/",
       githubUrl: "https://github.com/Gdhanush-13/HandPose-Detection-App",
-      featured: true
+      featured: false
     },
     {
-      title: "Automated Room Light Controller with Visitor Counter",
+      title: "Tomato Food Delivery App (MERN)",
+      description: "A full-stack food delivery platform built with the MERN stack and integrated with Stripe for seamless payments. Includes a user-facing app, admin dashboard, secure backend API, and a responsive UI for an enhanced food ordering experience.",
+      image: tomato,
+      tech: ["React", "Node.js", "Express", "MongoDB", "Stripe", "JWT", "Mongoose"],
+      liveUrl: "https://food-del-frontend-cfck.onrender.com/",
+      githubUrl: "https://github.com/Gdhanush-13/Food-del",
+      featured: false
+    },
+    {
+      title: "Prescripto Appointment App (MERN)",
+      description: "A full-stack medical appointment platform built using the MERN stack. Users can browse doctors, book appointments, and manage profiles, while admins can manage doctor availability, appointments, and dashboard analytics. Features JWT authentication and secure API endpoints.",
+      image: prescripto,
+      tech: ["React.js", "Vite", "Node.js", "Express.js", "MongoDB", "JWT", "Axios", "Cloudinary"],
+      liveUrl: "https://prescripto-appointment.onrender.com/",
+      githubUrl: "https://github.com/Gdhanush-13/Prescripto-Appointment",
+      featured: false
+    },
+    {
+      title: "Automated Room Light Controller",
       description: "An Arduino-based project that uses IR sensors to count people entering and leaving a room, automatically turning the lights on or off based on occupancy. The current count is displayed in real-time.",
       image: iotproject,
-      tech: ["Arduino Uno", "IR Sensors", "C/C++","IoT"],
+      tech: ["Arduino Uno", "IR Sensors", "C/C++", "IoT"],
       liveUrl: "#",
       githubUrl: "https://github.com/Gdhanush-13/IOT-Automated-Room-Light-Controller-with-Visitor-Counter",
-      featured: true
+      featured: false
     },
     {
       title: "Modern Developer Portfolio",
       description: "A comprehensive portfolio website showcasing skills, experience, and projects with smooth animations, dark mode toggle, and fully responsive design built with modern web technologies.",
       image: porfolio,
-      tech: ["React", "TypeScript", "Tailwind CSS", "Vite", "Framer Motion", "Radix UI"],
+      tech: ["React", "TypeScript", "Tailwind CSS", "Vite", "Radix UI", "shadcn/ui"],
       liveUrl: "https://dhanush-dev.vercel.app/",
       githubUrl: "https://github.com/Gdhanush-13/my-portfolio",
-      featured: false
-    },
-    {
-      title: "AI Due Diligence Copilot",
-      description: "A RAG platform that analyzes company filings, financial statements, investor presentations, and market reports to deliver source-backed risk assessments, growth opportunities, and executive summaries in seconds. Features semantic chunking, free embeddings via sentence-transformers, persistent ChromaDB vector store, and structured AI output.",
-      imageUrl: "https://opengraph.githubassets.com/1/Gdhanush-13/ai-due-diligence-copilot",
-      tech: ["Python", "FastAPI", "ChromaDB", "sentence-transformers", "OpenAI GPT-4o-mini", "pypdf", "Vanilla JS"],
-      liveUrl: "#",
-      githubUrl: "https://github.com/Gdhanush-13/ai-due-diligence-copilot",
-      featured: false
-    },
-    {
-      title: "RAG Doc Chatbot",
-      description: "A full-stack Retrieval-Augmented Generation application. Upload any PDF, TXT, or Markdown file and ask questions — answers are grounded in your documents with source citations. Features semantic chunking with sliding window overlap, free embeddings, persistent ChromaDB store, and a clean React chat UI with dark mode and drag-and-drop upload.",
-      imageUrl: "https://opengraph.githubassets.com/1/Gdhanush-13/rag-doc-chatbot",
-      tech: ["Python", "FastAPI", "ChromaDB", "sentence-transformers", "OpenAI", "React 18", "TypeScript", "Tailwind CSS", "Vite"],
-      liveUrl: "#",
-      githubUrl: "https://github.com/Gdhanush-13/rag-doc-chatbot",
-      featured: false
-    },
-    {
-      title: "Healthcare Knowledge Navigator",
-      description: "A medical RAG assistant that retrieves and synthesizes information from clinical guidelines, research papers, and treatment protocols. Delivers evidence-based answers with evidence-level classification (RCT > Cohort > Case report), confidence scoring, and source citations — all grounded in uploaded medical documents.",
-      imageUrl: "https://opengraph.githubassets.com/1/Gdhanush-13/healthcare-knowledge-navigator",
-      tech: ["Python", "FastAPI", "ChromaDB", "sentence-transformers", "OpenAI GPT-4o-mini", "pypdf", "Vanilla JS"],
-      liveUrl: "#",
-      githubUrl: "https://github.com/Gdhanush-13/healthcare-knowledge-navigator",
       featured: false
     }
   ];
@@ -137,7 +135,7 @@ const Projects = () => {
         <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
 
         {/* Overlay Actions */}
-        <div className="absolute top-4 right-4 flex space-x-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+        <div className="absolute top-4 right-4 flex space-x-2 opacity-100 transition-opacity duration-300">
           {project.githubUrl && project.githubUrl !== "#" && (
             <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
               <Button size="icon" variant="secondary" className="h-8 w-8">

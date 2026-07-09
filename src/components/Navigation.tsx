@@ -70,7 +70,7 @@ const Navigation = () => {
                 <button
                   key={item.id}
                   onClick={() => scrollToSection(item.id)}
-                  className={`px-3 py-2 rounded-md text-sm font-medium transition-all duration-300 ${activeSection === item.id
+                  className={`px-2 py-2 rounded-md text-sm font-medium transition-all duration-300 ${activeSection === item.id
                       ? 'text-primary bg-primary/10'
                       : 'text-muted-foreground hover:text-primary hover:bg-primary/5'
                     }`}

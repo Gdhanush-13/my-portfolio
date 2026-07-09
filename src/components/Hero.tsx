@@ -1,7 +1,8 @@
 import { useState, useEffect } from 'react';
-import { ChevronDown, Github, Linkedin, Mail, Code } from 'lucide-react';
+import { ChevronDown, Github, Linkedin, Mail, Code, Download } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import heroImage from '@/assets/hero-bg.jpg';
+import profileImg from '@/assets/profile.jpg';
 
 const ROLES = [
   "Software Engineer",
@@ -85,86 +86,99 @@ const Hero = () => {
         ))}
       </div>
 
-      {/* Main Content - FULL CENTER */}
-      <div className="relative z-20 w-full px-6 sm:px-8 lg:px-12 max-w-5xl mx-auto flex flex-col items-center justify-center text-center min-h-screen space-y-8">
-        {/* Greeting */}
-        <div className="animate-fade-up mt-24">
-          <p className="text-lg font-poppins font-medium text-primary mb-2 tracking-wider">
+      {/* Main Content - SPLIT LAYOUT */}
+      <div className="relative z-20 w-full px-6 sm:px-8 lg:px-16 max-w-6xl mx-auto flex flex-col lg:flex-row items-center justify-between gap-12 min-h-screen pt-28 pb-12">
+
+        {/* LEFT: Text Content */}
+        <div className="flex-1 flex flex-col items-center lg:items-start text-center lg:text-left space-y-6 animate-fade-up">
+          <p className="text-lg font-poppins font-medium text-primary tracking-wider">
             Hello there! 👋
           </p>
           <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-display font-bold leading-tight">
             I'm <span className="gradient-text">Dhanush</span>
           </h1>
-        </div>
 
-        {/* Dynamic Role */}
-        <div
-          className="animate-fade-up h-16 flex items-center justify-center"
-          style={{ animationDelay: '0.2s' }}
-        >
-          <div className="text-2xl sm:text-3xl lg:text-4xl font-poppins font-semibold flex items-center">
-            <span className="gradient-text-secondary">I am a {typedText}</span>
-            <span className="ml-1 w-[2px] h-8 bg-primary animate-blink"></span>
+          {/* Dynamic Role */}
+          <div className="h-12 flex items-center">
+            <div className="text-xl sm:text-2xl lg:text-3xl font-poppins font-semibold flex items-center">
+              <span className="gradient-text-secondary">I am a {typedText}</span>
+              <span className="ml-1 w-[2px] h-7 bg-primary animate-blink"></span>
+            </div>
+          </div>
+
+          {/* Bio */}
+          <p className="text-base sm:text-lg text-muted-foreground max-w-xl leading-relaxed">
+            I build things that scale and ship. Software Engineer at RealPage, crafting enterprise
+            React apps used by 500K+ users — and an AI builder in my own time, shipping production
+            RAG systems, LLM tools, and vector search across finance and healthcare.
+          </p>
+
+          {/* CTA Buttons */}
+          <div className="flex flex-wrap gap-4 justify-center lg:justify-start w-full">
+            <Button
+              size="lg"
+              className="hover-glow font-poppins font-medium text-base px-8 py-3"
+              onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+            >
+              <Mail className="mr-2 h-5 w-5" />
+              Let's Connect
+            </Button>
+            <Button
+              variant="outline"
+              size="lg"
+              className="hover-glow font-poppins font-medium text-base px-8 py-3"
+              onClick={() => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })}
+            >
+              View My Work
+            </Button>
+            <Button
+              variant="secondary"
+              size="lg"
+              className="hover-glow font-poppins font-medium text-base px-8 py-3"
+              onClick={() => { const a = document.createElement('a'); a.href = '/resume.pdf'; a.download = 'Dhanush_Guddala_Resume.pdf'; a.click(); }}
+            >
+              <Download className="mr-2 h-5 w-5" />
+              Resume
+            </Button>
+          </div>
+
+          {/* Social Links */}
+          <div className="flex gap-8 w-full justify-center lg:justify-start">
+            <a href="https://github.com/Gdhanush-13" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile">
+              <Github className="h-6 w-6 hover:text-primary transition" />
+            </a>
+            <a href="https://www.linkedin.com/in/dhanush-guddala/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile">
+              <Linkedin className="h-6 w-6 hover:text-primary transition" />
+            </a>
+            <a href="mailto:dhanushdhanu1300@gmail.com" aria-label="Send email">
+              <Mail className="h-6 w-6 hover:text-primary transition" />
+            </a>
+            <a href="https://leetcode.com/u/Dhanush-13/" target="_blank" rel="noopener noreferrer" aria-label="LeetCode profile">
+              <Code className="h-6 w-6 hover:text-primary transition" />
+            </a>
           </div>
         </div>
 
-        {/* About Me */}
-        <p
-          className="text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto animate-fade-up leading-relaxed"
-          style={{ animationDelay: '0.4s' }}
-        >
-          Results-driven and adaptable professional with a strong commitment
-          to excellence and a proven ability to deliver meaningful outcomes. Proactive
-          and innovative, I thrive in dynamic environments, consistently exceeding
-          expectations and contributing to impactful solutions that drive success.
-        </p>
-
-        {/* CTA Buttons */}
-        <div
-          className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-up"
-          style={{ animationDelay: '0.6s' }}
-        >
-          <Button
-            size="lg"
-            className="hover-glow font-poppins font-medium text-base px-8 py-3"
-            onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
-          >
-            <Mail className="mr-2 h-5 w-5" />
-            Let's Connect
-          </Button>
-          <Button
-            variant="outline"
-            size="lg"
-            className="hover-glow font-poppins font-medium text-base px-8 py-3"
-            onClick={() => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })}
-          >
-            View My Work
-          </Button>
+        {/* RIGHT: Profile Photo */}
+        <div className="flex-shrink-0 animate-fade-up" style={{ animationDelay: '0.3s' }}>
+          <div className="relative">
+            {/* Decorative glow behind photo */}
+            <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-primary/30 to-purple-500/30 blur-2xl scale-110" />
+            {/* Gradient border frame */}
+            <div className="relative w-64 h-72 sm:w-72 sm:h-80 lg:w-80 lg:h-96 rounded-2xl bg-gradient-to-br from-primary via-primary/60 to-purple-500 p-[2px] shadow-glow">
+              <img
+                src={profileImg}
+                alt="Dhanush Guddala"
+                className="w-full h-full rounded-2xl object-cover object-center"
+              />
+            </div>
+          </div>
         </div>
 
-        {/* Social Links */}
-        <div
-          className="flex justify-center gap-14 animate-fade-up"
-          style={{ animationDelay: '0.8s' }}
-        >
-          <a href="https://github.com/Gdhanush-13" target="_blank" rel="noopener noreferrer">
-            <Github className="h-6 w-6 hover:text-primary transition" />
-          </a>
-          <a href="https://www.linkedin.com/in/dhanush-750bb0243/" target="_blank" rel="noopener noreferrer">
-            <Linkedin className="h-6 w-6 hover:text-primary transition" />
-          </a>
-          <a href="mailto:dhanushdhanu1300@gmail.com">
-            <Mail className="h-6 w-6 hover:text-primary transition" />
-          </a>
-          <a href="https://leetcode.com/u/Dhanush-13/" target="_blank" rel="noopener noreferrer">
-            <Code className="h-6 w-6 hover:text-primary transition" />
-          </a>
-        </div>
-
-        {/* Scroll Indicator */}
+        {/* Scroll Indicator — positioned at bottom center */}
         <button
           onClick={scrollToNext}
-          className="animate-bounce z-30 mt-8"
+          className="animate-bounce z-30 absolute bottom-8 left-1/2 -translate-x-1/2"
         >
           <div className="flex flex-col items-center space-y-2">
             <span className="text-xs font-poppins text-muted-foreground">Scroll Down</span>

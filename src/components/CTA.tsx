@@ -32,9 +32,9 @@ const CTA = () => {
               </h2>
               
               <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
-                Let's collaborate and build high-impact digital experiences. From conversion-focused
-                property websites to scalable full-stack products, I deliver reliable solutions that
-                balance performance, usability, and business outcomes.
+                Let's collaborate and build something impactful. Whether it's a high-performance
+                React frontend, a scalable full-stack product, or an AI-powered RAG assistant --
+                I deliver reliable, well-engineered solutions from idea to deployment.
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
