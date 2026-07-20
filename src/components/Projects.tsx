@@ -61,6 +61,60 @@ const Projects = () => {
       featured: false
     },
     {
+      title: "Inbox Action Agent",
+      description: "AI agent that reads your inbox and acts on it. Plans multi-step tasks, calls Gmail/Calendar/File tools, requests human approval for destructive actions, and retries on failures — all orchestrated via a LangGraph ReAct state machine with PostgreSQL task logging.",
+      imageUrl: "https://opengraph.githubassets.com/1/Gdhanush-13/inbox-action-agent",
+      tech: ["Python", "FastAPI", "LangGraph", "OpenAI", "Gmail API", "Google Calendar API", "PostgreSQL", "Redis", "Docker"],
+      liveUrl: "#",
+      githubUrl: "https://github.com/Gdhanush-13/inbox-action-agent",
+      featured: false
+    },
+    {
+      title: "LLM Eval Bench",
+      description: "Automated LLM evaluation framework. Benchmark prompts across models, detect hallucinations with LLM-as-judge, track quality metrics (Exact Match, Token F1, Sequence Similarity) over time, and version your prompts — all via REST API with Langfuse observability.",
+      imageUrl: "https://opengraph.githubassets.com/1/Gdhanush-13/llm-eval-bench",
+      tech: ["Python", "FastAPI", "OpenAI", "Anthropic Claude", "PostgreSQL", "Langfuse", "Docker"],
+      liveUrl: "#",
+      githubUrl: "https://github.com/Gdhanush-13/llm-eval-bench",
+      featured: false
+    },
+    {
+      title: "Support Docs Copilot",
+      description: "Production-grade RAG documentation assistant. Ask natural language questions over your docs and get grounded, cited answers with conversation memory — powered by Qdrant hybrid search (Dense + BM25 + RRF), Redis session history, and GPT-4o-mini.",
+      imageUrl: "https://opengraph.githubassets.com/1/Gdhanush-13/support-docs-copilot",
+      tech: ["Python", "FastAPI", "LangChain", "Qdrant", "OpenAI", "Redis", "PostgreSQL", "Docker"],
+      liveUrl: "#",
+      githubUrl: "https://github.com/Gdhanush-13/support-docs-copilot",
+      featured: false
+    },
+    {
+      title: "AI Release Pipeline",
+      description: "LLMOps service for model versioning, A/B traffic splitting, and staged rollouts. Features a model registry with promotion stages (staging/production), configurable A/B experiment framework with deterministic routing, and experiment lifecycle management.",
+      imageUrl: "https://opengraph.githubassets.com/1/Gdhanush-13/ai-release-pipeline",
+      tech: ["Python", "FastAPI", "Pydantic", "Docker"],
+      liveUrl: "#",
+      githubUrl: "https://github.com/Gdhanush-13/ai-release-pipeline",
+      featured: false
+    },
+    {
+      title: "Guardrails AI",
+      description: "Safety layer for LLM inputs and outputs. Detects PII (email, phone, SSN, credit card), prevents prompt injection attacks, enforces content policies, and supports custom regex policy management — all exposed via a simple REST API.",
+      imageUrl: "https://opengraph.githubassets.com/1/Gdhanush-13/guardrails-ai",
+      tech: ["Python", "FastAPI", "Pydantic", "Docker"],
+      liveUrl: "#",
+      githubUrl: "https://github.com/Gdhanush-13/guardrails-ai",
+      featured: false
+    },
+    {
+      title: "Domain Reply Tuner",
+      description: "Fine-tuning pipeline for training domain-specific reply models using OpenAI's fine-tuning API. Handles JSONL training data preparation and validation, fine-tuning job submission and monitoring, and dataset management via REST API.",
+      imageUrl: "https://opengraph.githubassets.com/1/Gdhanush-13/domain-reply-tuner",
+      tech: ["Python", "FastAPI", "OpenAI SDK", "Pydantic", "Docker"],
+      liveUrl: "#",
+      githubUrl: "https://github.com/Gdhanush-13/domain-reply-tuner",
+      featured: false
+    },
+    {
       title: "HandPose Detection App",
       description: "A real-time hand pose detection application built with React.js and TensorFlow.js, leveraging MediaPipe's hand tracking model. The app captures webcam input to detect and visualize hand landmarks, enabling interactive gesture-based control for web applications.",
       image: handpose,

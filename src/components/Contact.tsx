@@ -142,9 +142,9 @@ const Contact: React.FC = () => {
                             <info.icon className="h-6 w-6 text-primary-foreground" />
                           </div>
                         </div>
-                        <div>
+                        <div className="min-w-0">
                           <p className="text-sm text-muted-foreground">{info.label}</p>
-                          <p className="font-medium">{info.value}</p>
+                          <p className="font-medium break-all">{info.value}</p>
                         </div>
                       </>
                     );

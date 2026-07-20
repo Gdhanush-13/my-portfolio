@@ -77,17 +77,16 @@ const Education = () => {
         {/* Education Timeline */}
         <div className="relative mb-20">
           {/* Timeline Line */}
-          <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-primary rounded-full hidden lg:block"></div>
+          <div className="absolute left-6 top-0 w-0.5 h-full bg-gradient-primary rounded-full hidden lg:block"></div>
 
           {educationData.map((edu, index) => (
             <div
               key={index}
-              className={`relative lg:w-1/2 mb-12 lg:mb-20 animate-fade-up ${index % 2 === 0 ? 'lg:pr-12' : 'lg:pl-12 lg:ml-auto'
-                }`}
+              className="relative lg:pl-16 mb-10 animate-fade-up"
               style={{ animationDelay: `${index * 0.3}s` }}
             >
               {/* Timeline Dot */}
-              <div className="absolute top-6 left-1/2 transform -translate-x-1/2 w-4 h-4 bg-primary rounded-full shadow-glow hidden lg:block"></div>
+              <div className="absolute top-8 left-[18px] w-4 h-4 bg-primary rounded-full shadow-glow hidden lg:block ring-4 ring-background"></div>
 
               <Card className="glass border-0 hover-glow group">
                 <CardContent className="p-8">
