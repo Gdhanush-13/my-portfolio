@@ -127,11 +127,11 @@ const Contact: React.FC = () => {
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-3 gap-12">
+        <div className="grid lg:grid-cols-5 gap-8 lg:gap-12">
           {/* Contact Information */}
-          <div className="lg:col-span-1">
+          <div className="lg:col-span-2">
             <Card className="glass border-0 mb-8 animate-fade-up" style={{ animationDelay: '0.2s' }}>
-              <CardContent className="p-8">
+              <CardContent className="p-6 sm:p-8">
                 <h3 className="text-2xl font-bold mb-6">Let's Connect</h3>
                 <div className="space-y-6">
                   {contactInfo.map((info) => {
@@ -142,9 +142,9 @@ const Contact: React.FC = () => {
                             <info.icon className="h-6 w-6 text-primary-foreground" />
                           </div>
                         </div>
-                        <div className="min-w-0">
+                        <div>
                           <p className="text-sm text-muted-foreground">{info.label}</p>
-                          <p className="font-medium truncate">{info.value}</p>
+                          <p className="font-medium">{info.value}</p>
                         </div>
                       </>
                     );
@@ -176,7 +176,7 @@ const Contact: React.FC = () => {
 
             {/* Social Links */}
             <Card className="glass border-0 animate-fade-up" style={{ animationDelay: '0.4s' }}>
-              <CardContent className="p-8">
+              <CardContent className="p-6 sm:p-8">
                 <h3 className="text-xl font-display font-bold mb-6">Follow Me</h3>
                 <div className="flex space-x-4">
                   {socialLinks.map((social) => (
@@ -197,9 +197,9 @@ const Contact: React.FC = () => {
           </div>
 
           {/* Contact Form */}
-          <div className="lg:col-span-2">
-            <Card className="glass border-0 animate-fade-up mt-6" style={{ animationDelay: '0.6s' }}>
-              <CardContent className="p-10">
+          <div className="lg:col-span-3">
+            <Card className="glass border-0 animate-fade-up" style={{ animationDelay: '0.6s' }}>
+              <CardContent className="p-5 sm:p-10">
                 <h3 className="text-2xl font-bold mb-6">Send Message</h3>
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div className="grid md:grid-cols-2 gap-6">

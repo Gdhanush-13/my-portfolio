@@ -46,7 +46,7 @@ const Experience = () => {
     <section id="experience" className="py-20 px-6 sm:px-8">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-4xl sm:text-5xl font-display font-bold mb-6">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-display font-bold mb-6">
             Professional{' '}
             <span className="gradient-text">Experience</span>
           </h2>

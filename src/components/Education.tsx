@@ -89,9 +89,9 @@ const Education = () => {
               <div className="absolute top-8 left-[18px] w-4 h-4 bg-primary rounded-full shadow-glow hidden lg:block ring-4 ring-background"></div>
 
               <Card className="glass border-0 hover-glow group">
-                <CardContent className="p-8">
+                <CardContent className="p-5 sm:p-8">
                   <div className="flex items-start gap-4 mb-4">
-                    <div className="p-3 rounded-lg bg-primary/10 text-primary">
+                    <div className="p-3 rounded-lg bg-primary/10 text-primary flex-shrink-0">
                       <BookOpen className="w-6 h-6" />
                     </div>
                     <div className="flex-1">
@@ -103,7 +103,7 @@ const Education = () => {
                           <Award className="w-4 h-4" />
                           <span className="font-medium">{edu.institution}</span>
                         </div>
-                        <div className="flex items-center gap-4">
+                        <div className="flex flex-wrap items-center gap-3 sm:gap-4">
                           <div className="flex items-center gap-1">
                             <CalendarDays className="w-4 h-4" />
                             <span>{edu.duration}</span>
@@ -115,7 +115,7 @@ const Education = () => {
                         </div>
                       </div>
                     </div>
-                    <Badge variant="secondary" className="font-bold">
+                    <Badge variant="secondary" className="font-bold flex-shrink-0">
                       {edu.grade}
                     </Badge>
                   </div>

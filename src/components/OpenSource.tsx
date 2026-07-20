@@ -71,7 +71,7 @@ const OpenSource = () => {
           ))}
         </div>
 
-        <div className="glass rounded-xl p-8 animate-fade-up">
+        <div className="glass rounded-xl p-6 sm:p-8 animate-fade-up">
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 text-center">
             <div>
               <p className="text-3xl font-bold text-primary">{publicRepos ?? '...'}</p>

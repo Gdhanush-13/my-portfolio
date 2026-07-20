@@ -87,7 +87,7 @@ const Hero = () => {
       </div>
 
       {/* Main Content - SPLIT LAYOUT */}
-      <div className="relative z-20 w-full px-6 sm:px-8 lg:px-16 max-w-6xl mx-auto flex flex-col lg:flex-row items-center justify-between gap-12 min-h-screen pt-28 pb-12">
+      <div className="relative z-20 w-full px-6 sm:px-8 lg:px-16 max-w-6xl mx-auto flex flex-col lg:flex-row items-center justify-between gap-8 lg:gap-12 min-h-screen pt-20 sm:pt-28 pb-12">
 
         {/* LEFT: Text Content */}
         <div className="flex-1 flex flex-col items-center lg:items-start text-center lg:text-left space-y-6 animate-fade-up">
@@ -160,12 +160,12 @@ const Hero = () => {
         </div>
 
         {/* RIGHT: Profile Photo */}
-        <div className="flex-shrink-0 animate-fade-up" style={{ animationDelay: '0.3s' }}>
+        <div className="flex-shrink-0 flex justify-center lg:block animate-fade-up" style={{ animationDelay: '0.3s' }}>
           <div className="relative">
             {/* Decorative glow behind photo */}
             <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-primary/30 to-purple-500/30 blur-2xl scale-110" />
             {/* Gradient border frame */}
-            <div className="relative w-64 h-72 sm:w-72 sm:h-80 lg:w-80 lg:h-96 rounded-2xl bg-gradient-to-br from-primary via-primary/60 to-purple-500 p-[2px] shadow-glow">
+            <div className="relative w-52 h-60 sm:w-72 sm:h-80 lg:w-80 lg:h-96 rounded-2xl bg-gradient-to-br from-primary via-primary/60 to-purple-500 p-[2px] shadow-glow">
               <img
                 src={profileImg}
                 alt="Dhanush Guddala"
