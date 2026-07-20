@@ -5,7 +5,7 @@ import { Button } from '@/components/ui/button';
 import { useGithubProfile } from '@/hooks/useGithubProfile';
 
 const OpenSource = () => {
-  const { publicRepos } = useGithubProfile();
+  const { publicRepos, forkedRepos } = useGithubProfile();
 
   const contributionHighlights = [
     {
@@ -82,7 +82,7 @@ const OpenSource = () => {
               <p className="text-sm text-muted-foreground mt-1">GitHub Achievements</p>
             </div>
             <div>
-              <p className="text-3xl font-bold text-primary">7+</p>
+              <p className="text-3xl font-bold text-primary">{forkedRepos ?? '...'}</p>
               <p className="text-sm text-muted-foreground mt-1">Major OSS Repos Forked</p>
             </div>
             <div>

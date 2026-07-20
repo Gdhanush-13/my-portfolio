@@ -15,10 +15,12 @@ export type GithubRepo = {
   stargazers_count: number;
   forks_count: number;
   pushed_at: string;
+  fork: boolean;
 };
 
 type GithubProfileState = {
   publicRepos: number | null;
+  forkedRepos: number | null;
   followers: number | null;
   following: number | null;
   repos: GithubRepo[];
@@ -33,6 +35,7 @@ const CACHE_TTL_MS = 1000 * 60 * 30;
 export const useGithubProfile = () => {
   const [state, setState] = useState<GithubProfileState>({
     publicRepos: null,
+    forkedRepos: null,
     followers: null,
     following: null,
     repos: [],
@@ -77,8 +80,11 @@ export const useGithubProfile = () => {
           .filter((repo) => !repo.name.toLowerCase().includes('portfolio'))
           .slice(0, 6);
 
+        const forkedRepos = reposData.filter((repo) => repo.fork).length;
+
         const payload = {
           publicRepos: userData.public_repos,
+          forkedRepos,
           followers: userData.followers,
           following: userData.following,
           repos: curatedRepos

@@ -144,7 +144,7 @@ const Contact: React.FC = () => {
                         </div>
                         <div className="min-w-0">
                           <p className="text-sm text-muted-foreground">{info.label}</p>
-                          <p className="font-medium break-all">{info.value}</p>
+                          <p className="font-medium truncate">{info.value}</p>
                         </div>
                       </>
                     );
