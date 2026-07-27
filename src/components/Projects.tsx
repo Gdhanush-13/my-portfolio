@@ -52,6 +52,15 @@ const Projects = () => {
       featured: true
     },
     {
+      title: "Pipeline Flow — Visual Pipeline Builder",
+      description: "A full-stack visual pipeline builder with drag-and-drop canvas. Design data processing workflows using 9 node types (LLM, Filter, Merge, API, Transform…), validate DAG structure, and auto-generate entire pipelines from natural language via GPT-4o-mini. Features dynamic variable detection in text nodes and real-time DAG cycle validation.",
+      imageUrl: "https://opengraph.githubassets.com/1/Gdhanush-13/Pipeline-Builder",
+      tech: ["React 18", "ReactFlow", "Zustand", "shadcn/ui", "Tailwind CSS", "FastAPI", "Pydantic", "OpenAI GPT-4o-mini", "Vite"],
+      liveUrl: "#",
+      githubUrl: "https://github.com/Gdhanush-13/Pipeline-Builder",
+      featured: true
+    },
+    {
       title: "Healthcare Knowledge Navigator",
       description: "A medical RAG assistant that retrieves and synthesizes information from clinical guidelines, research papers, and treatment protocols. Delivers evidence-based answers with evidence-level classification (RCT > Cohort > Case report), confidence scoring, and source citations.",
       imageUrl: "https://opengraph.githubassets.com/1/Gdhanush-13/healthcare-knowledge-navigator",
