@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { ChevronDown, Github, Linkedin, Mail, Code, Download } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import heroImage from '@/assets/hero-bg.jpg';
-import profileImg from '@/assets/professtional-photo.jpg';
+import profileImg from '@/assets/profile.jpg';
 
 const ROLES = [
   "Software Engineer",
